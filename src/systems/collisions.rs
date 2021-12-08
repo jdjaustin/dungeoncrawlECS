@@ -1,5 +1,6 @@
 use crate::prelude::*;
 
+// setup collision system
 #[system]
 #[read_component(Point)]
 #[read_component(Player)]

@@ -11,3 +11,7 @@ pub struct Player;
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Enemy;
+
+// create random movement component
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct MovingRandomly;
