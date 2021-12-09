@@ -15,3 +15,10 @@ pub struct Enemy;
 // create random movement component
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct MovingRandomly;
+
+// create messaging component
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct WantsToMove {
+    pub entity: Entity,
+    pub destination: Point,
+}
