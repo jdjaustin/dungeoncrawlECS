@@ -22,3 +22,14 @@ pub struct WantsToMove {
     pub entity: Entity,
     pub destination: Point,
 }
+
+// add max/current health component
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct Health {
+    pub current: i32,
+    pub max: i32,
+}
+
+// naming the monster mash
+#[derive(Clone, PartialEq)]
+pub struct Name(pub String);
