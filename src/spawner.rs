@@ -8,7 +8,7 @@ pub fn spawn_player(ecs: &mut World, pos: Point) {
             color: ColorPair::new(WHITE, BLACK),
             glyph: to_cp437('@'),
         },
-        Health {current: 10, max: 10}
+        Health {current: 50, max: 50}
     ));
 }
 
@@ -43,4 +43,18 @@ fn goblin() -> (i32, String, FontCharType) {
 
 fn orc() -> (i32, String, FontCharType) {
     (2, "Orc".to_string(), to_cp437('o'))
+}
+
+pub fn spawn_amulet_of_yaya(ecs: &mut World, pos: Point) {
+    ecs.push(
+        (Item,
+            AmuletOfYaya,
+            pos,
+            Render{
+                color: ColorPair::new(WHITE, BLACK),
+                glyph: to_cp437('|')
+            },
+            Name("Amulet of Yaya".to_string())
+        )
+    );
 }
