@@ -2,8 +2,10 @@ use std::thread::spawn;
 
 use crate::prelude::*;
 use automata::CellularAutomataArchitect;
+use drunkard::DrunkardsWalkArchitect;
 use empty::EmptyArchitect;
 mod automata;
+mod drunkard;
 mod empty;
 const NUM_ROOMS: usize = 20;
 
@@ -127,7 +129,7 @@ impl MapBuilder {
     }
 
     pub fn new(rng: &mut RandomNumberGenerator) -> Self {
-        let mut architect = CellularAutomataArchitect{};
+        let mut architect = DrunkardsWalkArchitect{};
         architect.new(rng)
     }
 }
