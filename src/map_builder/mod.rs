@@ -3,10 +3,12 @@ use std::thread::spawn;
 use crate::prelude::*;
 use automata::CellularAutomataArchitect;
 use drunkard::DrunkardsWalkArchitect;
+use rooms::RoomsArchitect;
 use empty::EmptyArchitect;
 mod automata;
 mod drunkard;
 mod empty;
+mod rooms;
 const NUM_ROOMS: usize = 20;
 
 trait MapArchitect {
